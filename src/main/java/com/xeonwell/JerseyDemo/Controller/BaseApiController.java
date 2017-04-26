@@ -1,5 +1,7 @@
 package com.xeonwell.JerseyDemo.Controller;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.core.Context;
 
@@ -9,4 +11,11 @@ import javax.ws.rs.core.Context;
 public class BaseApiController implements IBaseApiController {
     @Context
     HttpServletRequest request;
+
+    public static Logger logger = null;
+
+    public BaseApiController()
+    {
+        logger = Logger.getLogger(BaseApiController.class);
+    }
 }

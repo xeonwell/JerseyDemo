@@ -17,6 +17,7 @@ public class HelloWorldController extends BaseApiController {
     // 与Produces对应的是@Consumes，表示接受的数据类型为text/plain
     @Produces("text/plain")
     public String getMessage() {
+        logger.debug("hello world.");
         return "Hello world!";
     }
 }

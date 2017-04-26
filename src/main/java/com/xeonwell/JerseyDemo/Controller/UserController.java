@@ -53,6 +53,8 @@ public class UserController extends BaseApiController {
                 u.firstName = rs.getString("FirstName");
                 u.lastName = rs.getString("last_name");
                 result = ok(u);
+
+                logger.debug("get user successfully.");
             }
 
             rs.close();
