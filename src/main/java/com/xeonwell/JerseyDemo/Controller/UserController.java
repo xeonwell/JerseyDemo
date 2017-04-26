@@ -24,7 +24,7 @@ public class UserController extends BaseApiController {
                 new User(111, "xeon", "well"),
                 new User(222, "来个", "中文"),
         };
-        return OK(userList);
+        return ok(userList);
     }
 
     @GET
@@ -43,7 +43,7 @@ public class UserController extends BaseApiController {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://192.168.6.110:3308/xw_test?user=replication&password=123456&serverTimezone=UTC&characterEncoding=utf8");
 
-            pstmt = conn.prepareStatement("SELECT * from `name_test` WHERE Id=?");
+            pstmt = conn.prepareStatement("SELECT * FROM `name_test` WHERE Id=?");
             pstmt.setInt(1, id);
             rs = pstmt.executeQuery();
 
@@ -52,19 +52,17 @@ public class UserController extends BaseApiController {
                 u.id = rs.getInt("Id");
                 u.firstName = rs.getString("FirstName");
                 u.lastName = rs.getString("last_name");
-                result = OK(u);
+                result = ok(u);
             }
 
             rs.close();
             pstmt.close();
             conn.close();
 
-        } catch (SQLException ex) {
-            return Fail(ex.getMessage());
-        } catch (ClassNotFoundException ex) {
-            return Fail(ex.getMessage());
+        } catch (Exception ex) {
+            return fail(ex.getMessage());
         }
 
-        return result != null ? result : Fail("can not get");
+        return result != null ? result : fail("can not get");
     }
 }

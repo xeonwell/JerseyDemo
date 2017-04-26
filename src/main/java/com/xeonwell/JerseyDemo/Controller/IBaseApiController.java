@@ -9,15 +9,15 @@ import com.xeonwell.JerseyDemo.Model.BlResult;
 public interface IBaseApiController {
     String MediaTypeUtf8Json = "application/json;charset=utf-8";
 
-    default BlResult OK(Object o) {
+    default BlResult ok(Object o) {
         return new BlResult(BlStatus.OK, o);
     }
 
-    default BlResult Fail(String msg) {
+    default BlResult fail(String msg) {
         return new BlResult(BlStatus.Fail, msg);
     }
 
-    default BlResult NeedLogin() {
+    default BlResult needLogin() {
         return new BlResult(BlStatus.NeedLogin, null);
     }
 }
