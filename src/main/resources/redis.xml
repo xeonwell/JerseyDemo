@@ -30,6 +30,7 @@
     <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
           p:host-name="${redis.host}"
           p:port="${redis.port}"
+          p:database="${redis.database}"
           p:pool-config-ref="poolConfig"/>
     <!--p:password="${redis.pass}"-->
     <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
