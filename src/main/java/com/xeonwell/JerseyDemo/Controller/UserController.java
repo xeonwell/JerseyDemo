@@ -4,6 +4,7 @@ package com.xeonwell.JerseyDemo.Controller;
  * Created by xeonwell on 2017-04-24.
  */
 
+import com.xeonwell.JerseyDemo.Common.BaseApiController;
 import com.xeonwell.JerseyDemo.Model.BlResult;
 import com.xeonwell.JerseyDemo.Model.User;
 

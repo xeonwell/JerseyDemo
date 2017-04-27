@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Controller;
+package com.xeonwell.JerseyDemo.Common;
 
 import com.xeonwell.JerseyDemo.Enum.BlStatus;
 import com.xeonwell.JerseyDemo.Model.BlResult;
