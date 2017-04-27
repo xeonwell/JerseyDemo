@@ -3,12 +3,13 @@ CREATE TABLE `podcasts` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `title` varchar(145) NOT NULL,
   `feed` varchar(145) NOT NULL,
-  `insertion_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `insertion_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `description` varchar(500) DEFAULT NULL,
   `link_on_podcastpedia` varchar(145) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `feed_UNIQUE` (`feed`)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 
 INSERT INTO `podcasts` VALUES
