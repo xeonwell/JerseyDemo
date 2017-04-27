@@ -1,13 +1,15 @@
 package com.xeonwell.JerseyDemo.dao;
 
 
+import com.xeonwell.JerseyDemo.model.Podcast;
+
 import java.util.List;
 
 /**
  * Created by xeonwell on 2017-04-26.
  */
 public interface PodcastDao {
-    public List<com.xeonwell.JerseyDemo.Model.Podcast> getPodcasts();
+    public List<Podcast> getPodcasts();
 
     /**
      * Returns a podcast given its id
@@ -15,13 +17,13 @@ public interface PodcastDao {
      * @param id
      * @return
      */
-    public com.xeonwell.JerseyDemo.Model.Podcast getPodcastById(Long id);
+    public Podcast getPodcastById(Long id);
 
     public Long deletePodcastById(Long id);
 
-    public Long createPodcast(com.xeonwell.JerseyDemo.Model.Podcast podcast);
+    public Long createPodcast(Podcast podcast);
 
-    public int updatePodcast(com.xeonwell.JerseyDemo.Model.Podcast podcast);
+    public int updatePodcast(Podcast podcast);
 
     /** removes all podcasts */
     public void deletePodcasts();

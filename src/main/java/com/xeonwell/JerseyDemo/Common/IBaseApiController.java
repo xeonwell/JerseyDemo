@@ -1,7 +1,7 @@
 package com.xeonwell.JerseyDemo.Common;
 
 import com.xeonwell.JerseyDemo.Enum.BlStatus;
-import com.xeonwell.JerseyDemo.Model.BlResult;
+import com.xeonwell.JerseyDemo.model.BlResult;
 
 /**
  * Created by xeonwell on 2017-04-25.

@@ -3,7 +3,7 @@
  
 <mapper namespace="com.xeonwell.JerseyDemo.dao.PodcastDao">
 
-    <resultMap id="podcastMap" type="com.xeonwell.JerseyDemo.Model.Podcast" >
+    <resultMap id="podcastMap" type="com.xeonwell.JerseyDemo.model.Podcast" >
         <id column="id" property="id"  />
         <result column="title" property="title" />
         <result column="link_on_podcastpedia" property="linkOnPodcastpedia" />
@@ -14,7 +14,7 @@
  
     
  	<!-- ************** CREATE ************** -->
- 	<insert id="createPodcast" parameterType="com.xeonwell.JerseyDemo.Model.Podcast" useGeneratedKeys="true">
+ 	<insert id="createPodcast" parameterType="com.xeonwell.JerseyDemo.model.Podcast" useGeneratedKeys="true">
 		INSERT 
 			INTO podcasts
 		SET 
@@ -66,7 +66,7 @@
     </select>
      	
  	<!-- ************** UPDATE ************** -->
- 	<update id="updatePodcast" parameterType="com.xeonwell.JerseyDemo.Model.Podcast">
+ 	<update id="updatePodcast" parameterType="com.xeonwell.JerseyDemo.model.Podcast">
 		UPDATE 
 			podcasts
 		SET 

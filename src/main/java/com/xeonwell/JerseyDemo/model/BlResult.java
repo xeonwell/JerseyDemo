@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Model;
+package com.xeonwell.JerseyDemo.model;
 
 import com.xeonwell.JerseyDemo.Enum.BlStatus;
 

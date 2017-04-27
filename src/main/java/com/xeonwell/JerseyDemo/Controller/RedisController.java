@@ -1,8 +1,8 @@
 package com.xeonwell.JerseyDemo.Controller;
 
 import com.xeonwell.JerseyDemo.Common.BaseApiController;
-import com.xeonwell.JerseyDemo.Model.BlResult;
-import com.xeonwell.JerseyDemo.Model.User;
+import com.xeonwell.JerseyDemo.model.BlResult;
+import com.xeonwell.JerseyDemo.model.User;
 import com.xeonwell.JerseyDemo.Service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 

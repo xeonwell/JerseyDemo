@@ -5,8 +5,8 @@ package com.xeonwell.JerseyDemo.Controller;
  */
 
 import com.xeonwell.JerseyDemo.Common.BaseApiController;
-import com.xeonwell.JerseyDemo.Model.BlResult;
-import com.xeonwell.JerseyDemo.Model.User;
+import com.xeonwell.JerseyDemo.model.BlResult;
+import com.xeonwell.JerseyDemo.model.User;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

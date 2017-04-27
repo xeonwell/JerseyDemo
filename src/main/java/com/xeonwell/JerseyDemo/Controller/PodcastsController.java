@@ -16,7 +16,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.xeonwell.JerseyDemo.dao.PodcastDao;
-import com.xeonwell.JerseyDemo.Model.Podcast;
+import com.xeonwell.JerseyDemo.model.Podcast;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
