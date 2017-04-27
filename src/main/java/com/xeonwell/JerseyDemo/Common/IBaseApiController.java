@@ -9,6 +9,9 @@ import com.xeonwell.JerseyDemo.Model.BlResult;
 public interface IBaseApiController {
     String MediaTypeUtf8Json = "application/json;charset=utf-8";
 
+    default BlResult ok() {
+        return new BlResult(BlStatus.OK, "");
+    }
     default BlResult ok(Object o) {
         return new BlResult(BlStatus.OK, o);
     }

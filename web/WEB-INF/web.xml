@@ -4,10 +4,12 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!--listeners-->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
+    <!--encoding handler-->
     <filter>
         <description>字符集过滤器</description>
         <filter-name>encodingFilter</filter-name>
@@ -27,11 +29,24 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!--spring session-->
+    <filter>
+        <filter-name>springSessionRepositoryFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSessionRepositoryFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--config loading-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring.xml,classpath:spring-mybatis.xml,classpath:redis.xml</param-value>
     </context-param>
 
+
+    <!--servlet def-->
     <servlet>
         <servlet-name>jerseydemo</servlet-name>
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>

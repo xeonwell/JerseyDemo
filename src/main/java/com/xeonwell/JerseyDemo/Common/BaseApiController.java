@@ -10,7 +10,7 @@ import javax.ws.rs.core.Context;
  */
 public class BaseApiController implements IBaseApiController {
     @Context
-    HttpServletRequest request;
+    protected HttpServletRequest request;
 
     public static Logger logger = null;
 
