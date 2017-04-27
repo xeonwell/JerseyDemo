@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Service;
+package com.xeonwell.JerseyDemo.Controller;
 
 
 import java.util.List;
@@ -26,7 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Component
 @Path("/podcasts")
-public class PodcastRestService {
+public class PodcastsController {
     @Autowired
     private PodcastDao podcastDao;
 
