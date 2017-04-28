@@ -18,13 +18,11 @@ import javax.ws.rs.core.Response;
 import com.xeonwell.JerseyDemo.dao.PodcastDao;
 import com.xeonwell.JerseyDemo.Model.Podcast;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by xeonwell on 2017-04-26.
  */
-@Component
 @Path("/podcasts")
 public class PodcastsController {
     @Autowired
