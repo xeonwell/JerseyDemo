@@ -1,6 +1,4 @@
-package com.xeonwell.JerseyDemo.Common;
-
-import sun.misc.Regexp;
+package com.xeonwell.JerseyDemo.common;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

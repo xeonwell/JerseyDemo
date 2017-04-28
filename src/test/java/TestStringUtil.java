@@ -1,5 +1,5 @@
-import com.xeonwell.JerseyDemo.Common.RegexpUtil;
-import com.xeonwell.JerseyDemo.Common.StringUtil;
+import com.xeonwell.JerseyDemo.common.RegexpUtil;
+import com.xeonwell.JerseyDemo.common.StringUtil;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Common;
+package com.xeonwell.JerseyDemo.common;
 
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import redis.clients.jedis.JedisPool;

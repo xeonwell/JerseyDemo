@@ -1,6 +1,6 @@
-package com.xeonwell.JerseyDemo.Common;
+package com.xeonwell.JerseyDemo.common;
 
-import com.xeonwell.JerseyDemo.Enum.BlStatus;
+import com.xeonwell.JerseyDemo.enums.BlStatus;
 import com.xeonwell.JerseyDemo.model.BlResult;
 
 /**

@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Controller;
+package com.xeonwell.JerseyDemo.controller;
 
 
 import java.util.List;

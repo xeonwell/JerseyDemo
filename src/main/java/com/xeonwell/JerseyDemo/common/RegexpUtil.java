@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Common;
+package com.xeonwell.JerseyDemo.common;
 
 import java.util.function.Function;
 import java.util.regex.Matcher;

@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Common.filter;
+package com.xeonwell.JerseyDemo.common.filter;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerResponseContext;

@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Common;
+package com.xeonwell.JerseyDemo.common;
 
 /**
  * Created by xeonwell on 2017-04-25.

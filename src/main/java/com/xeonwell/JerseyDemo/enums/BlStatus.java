@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Enum;
+package com.xeonwell.JerseyDemo.enums;
 
 /**
  * Created by xeonwell on 2017-04-24.

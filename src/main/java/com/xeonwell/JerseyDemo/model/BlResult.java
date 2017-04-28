@@ -1,6 +1,6 @@
 package com.xeonwell.JerseyDemo.model;
 
-import com.xeonwell.JerseyDemo.Enum.BlStatus;
+import com.xeonwell.JerseyDemo.enums.BlStatus;
 
 import java.io.Serializable;
 

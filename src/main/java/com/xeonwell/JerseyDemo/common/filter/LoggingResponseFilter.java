@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Common.filter;
+package com.xeonwell.JerseyDemo.common.filter;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;

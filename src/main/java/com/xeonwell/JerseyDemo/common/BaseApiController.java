@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Common;
+package com.xeonwell.JerseyDemo.common;
 
 import org.apache.log4j.Logger;
 

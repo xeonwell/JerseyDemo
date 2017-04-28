@@ -33,7 +33,7 @@
           p:database="${redis.database}"
           p:pool-config-ref="poolConfig"/>
     <!--p:password="${redis.pass}"-->
-    <bean id="jedisPool" class="com.xeonwell.JerseyDemo.Common.RedisPool">
+    <bean id="jedisPool" class="com.xeonwell.JerseyDemo.common.RedisPool">
         <constructor-arg index="0" ref="poolConfig"/>
         <constructor-arg index="1" value="${redis.host}"/>
         <constructor-arg index="2" value="${redis.port}" type="int"/>
@@ -43,7 +43,7 @@
     <bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">
         <property name="connectionFactory" ref="connectionFactory"/>
     </bean>
-    <bean id="redisService" class="com.xeonwell.JerseyDemo.Service.RedisService"/>
+    <bean id="redisService" class="com.xeonwell.JerseyDemo.service.RedisService"/>
 
     <!--redis session bean-->
     <bean id="redisHttpSessionConfiguration"

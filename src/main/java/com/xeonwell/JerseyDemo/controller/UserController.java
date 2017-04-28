@@ -1,10 +1,10 @@
-package com.xeonwell.JerseyDemo.Controller;
+package com.xeonwell.JerseyDemo.controller;
 
 /**
  * Created by xeonwell on 2017-04-24.
  */
 
-import com.xeonwell.JerseyDemo.Common.BaseApiController;
+import com.xeonwell.JerseyDemo.common.BaseApiController;
 import com.xeonwell.JerseyDemo.model.BlResult;
 import com.xeonwell.JerseyDemo.model.User;
 

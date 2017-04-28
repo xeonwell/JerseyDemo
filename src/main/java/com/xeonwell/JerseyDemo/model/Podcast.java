@@ -1,6 +1,9 @@
 package com.xeonwell.JerseyDemo.model;
 
+import com.xeonwell.JerseyDemo.common.DateFormatterAdapter;
+
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -28,6 +31,8 @@ public class Podcast implements Serializable {
     private String description;
 
     /** when an episode was last published on the feed*/
+
+    @XmlJavaTypeAdapter(DateFormatterAdapter.class)
     private Date insertionDate;
 
     public Podcast(){}

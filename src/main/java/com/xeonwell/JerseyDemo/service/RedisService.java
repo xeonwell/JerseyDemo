@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.Service;
+package com.xeonwell.JerseyDemo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

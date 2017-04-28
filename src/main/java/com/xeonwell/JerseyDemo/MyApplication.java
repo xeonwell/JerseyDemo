@@ -1,11 +1,7 @@
 package com.xeonwell.JerseyDemo;
 
-import com.xeonwell.JerseyDemo.Common.filter.CORSResponseFilter;
-import com.xeonwell.JerseyDemo.Common.filter.LoggingResponseFilter;
-import com.xeonwell.JerseyDemo.Controller.HelloWorldController;
-import com.xeonwell.JerseyDemo.Controller.RedisController;
-import com.xeonwell.JerseyDemo.Controller.UserController;
-import com.xeonwell.JerseyDemo.Controller.PodcastsController;
+import com.xeonwell.JerseyDemo.common.filter.CORSResponseFilter;
+import com.xeonwell.JerseyDemo.common.filter.LoggingResponseFilter;
 import org.apache.log4j.Logger;
 import org.glassfish.jersey.server.ResourceConfig;
 
@@ -19,7 +15,7 @@ public class MyApplication extends ResourceConfig {
 
         logger.info("app init. ");
 
-        packages(this.getClass().getPackage().getName() + ".Controller");
+        packages(this.getClass().getPackage().getName() + ".controller");
 //        register(HelloWorldController.class);
 //        register(UserController.class);
 //        register(PodcastsController.class);
