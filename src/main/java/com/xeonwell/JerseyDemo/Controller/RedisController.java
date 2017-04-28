@@ -31,6 +31,14 @@ public final class RedisController extends BaseApiController {
     }
 
     @GET
+    @Path("/set/{key}/{value}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public BlResult setKey(@PathParam("key") String key, @PathParam("value") String value) {
+        redisService.set(key, value);
+        return ok();
+    }
+
+    @GET
     @Path("/login/{user}/{pass}")
     @Produces(MediaType.APPLICATION_JSON)
     public BlResult login(@PathParam("user") String user, @PathParam("pass") String pass) {
