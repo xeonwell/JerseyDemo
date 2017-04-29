@@ -1,4 +1,4 @@
-package com.xeonwell.JerseyDemo.common;
+package com.xeonwell.JerseyDemo.common.exception;
 
 /**
  * Created by xeonwell on 2017-04-25.
