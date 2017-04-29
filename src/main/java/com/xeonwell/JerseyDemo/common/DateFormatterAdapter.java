@@ -22,7 +22,7 @@ public class DateFormatterAdapter extends XmlAdapter<String, Date> {
 
     @Override
     public String marshal(Date v) throws Exception {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CHINA);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return simpleDateFormat.format(v);
     }
 }
