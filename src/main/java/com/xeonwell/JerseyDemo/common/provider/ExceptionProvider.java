@@ -28,7 +28,8 @@ public class ExceptionProvider implements ExceptionMapper<Exception> {
     @Override
     public Response toResponse(Exception exception) {
         logger.warn("Exception Api:" + request.getRequestURI());
-        logger.warn(exception);
+        logger.warn(exception.getMessage(), exception);
+
         if (exception instanceof BusinessException) {
             return Response.ok(new BlResult(BlStatus.Fail, exception.getMessage()), MediaType.APPLICATION_JSON).build();
         } else {
