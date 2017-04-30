@@ -5,19 +5,25 @@ package com.xeonwell.JerseyDemo.controller;
  */
 
 import com.xeonwell.JerseyDemo.common.BaseApiController;
+import com.xeonwell.JerseyDemo.common.exception.DataAccessException;
 import com.xeonwell.JerseyDemo.model.BlResult;
 import com.xeonwell.JerseyDemo.model.User;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.sql.*;
 import java.sql.PreparedStatement;
 
 @Path("/users")
 public class UserController extends BaseApiController {
+
+    static {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException ex) {
+            logger.error(ex);
+        }
+    }
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public BlResult getUsersList() {
@@ -31,41 +37,38 @@ public class UserController extends BaseApiController {
     @GET
     @Produces(MediaTypeUtf8Json)
     @Path("/{id}")
-    public BlResult getUserById(@PathParam("id") int id) {
+    public BlResult getUserById(@PathParam("id") int id) throws DataAccessException, SQLException {
 
         BlResult result = null;
 
+        Connection conn;
+        ResultSet rs;
+        PreparedStatement pstmt;
 
-        try {
-            Connection conn = null;
-            ResultSet rs = null;
-            PreparedStatement pstmt = null;
 
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://192.168.6.110:3308/xw_test?user=replication&password=123456&serverTimezone=UTC&characterEncoding=utf8");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:13306/xw_test?user=replication&password=123456&serverTimezone=UTC&characterEncoding=utf8");
 
-            pstmt = conn.prepareStatement("SELECT * FROM `name_test` WHERE Id=?");
-            pstmt.setInt(1, id);
-            rs = pstmt.executeQuery();
+        pstmt = conn.prepareStatement("SELECT * FROM `name_test` WHERE Id=?");
+        pstmt.setInt(1, id);
+        rs = pstmt.executeQuery();
 
-            if (rs.next()) {
-                User u = new User();
-                u.id = rs.getInt("Id");
-                u.firstName = rs.getString("FirstName");
-                u.lastName = rs.getString("last_name");
-                result = ok(u);
+        if (rs.next()) {
+            User u = new User();
+            u.id = rs.getInt("Id");
+            u.firstName = rs.getString("FirstName");
+            u.lastName = rs.getString("last_name");
+            result = ok(u);
 
-                logger.debug("get user successfully.");
-            }
-
-            rs.close();
-            pstmt.close();
-            conn.close();
-
-        } catch (Exception ex) {
-            return fail(ex.getMessage());
+            logger.debug("get user successfully.");
         }
 
-        return result != null ? result : fail("can not get");
+        rs.close();
+        pstmt.close();
+        conn.close();
+
+
+        if (result != null) return result;
+        throw new DataAccessException("user not found");
+//        return result != null ? result : fail("can not get");
     }
 }

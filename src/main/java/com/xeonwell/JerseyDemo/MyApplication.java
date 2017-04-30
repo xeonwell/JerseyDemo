@@ -2,6 +2,7 @@ package com.xeonwell.JerseyDemo;
 
 import com.xeonwell.JerseyDemo.common.filter.CORSResponseFilter;
 import com.xeonwell.JerseyDemo.common.filter.LoggingResponseFilter;
+import com.xeonwell.JerseyDemo.common.provider.ExceptionProvider;
 import org.apache.log4j.Logger;
 import org.glassfish.jersey.server.ResourceConfig;
 
@@ -23,5 +24,7 @@ public class MyApplication extends ResourceConfig {
 
         register(CORSResponseFilter.class);
         register(LoggingResponseFilter.class);
+
+        register(ExceptionProvider.class);
     }
 }

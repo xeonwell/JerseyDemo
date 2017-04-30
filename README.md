@@ -10,7 +10,7 @@
     - jdk 8
 
 - support multiple config for dev/test/prod
-- test on win10 & mac
+- test on win10 & macos sierra
 
 ### References
 - [Jersey 2 + Maven + Tomcat + IntelliJ IDEA 搭建RESTful服务](http://www.cnblogs.com/xiongxx/p/6061079.html)

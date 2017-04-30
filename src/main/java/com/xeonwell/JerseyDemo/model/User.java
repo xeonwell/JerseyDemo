@@ -1,5 +1,7 @@
 package com.xeonwell.JerseyDemo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 
 /**
@@ -10,6 +12,7 @@ public class User implements Serializable {
     public int id;
     public String firstName;
     public String lastName;
+    @JsonIgnore
     public String password;
 //    public int age;
 
